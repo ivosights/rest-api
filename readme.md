@@ -9,6 +9,7 @@ CRUD Articles https://rest-api.r10.co/articles
 * updated_at
 
 ### GET /articles
+list article
 ```
 {
     "status": true,
@@ -45,6 +46,11 @@ CRUD Articles https://rest-api.r10.co/articles
 
 
 ### POST /articles
+create article
+
 ### PUT /articles/:id
+update article by id
+
 ### DELETE /articles/:id
+delete article by id
 
