@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -21,11 +16,19 @@ class ArticleController extends Controller
     {
         try {
             $statusCode = 200;
-            $data = Article::orderBy('updated_at', 'desc')->get();
+            $offset = $this->request->input('offset') ? $this->request->input('offset') : 0;
+            $limit = $this->request->input('limit') ? ($this->request->input('limit') > 25 ? 25 : $this->request->input('limit')) : 25;
+            $articles = Article::orderBy('updated_at', 'desc')
+                ->offset($offset)
+                ->limit($limit)
+                ->get();
 
             $response = [
                 'status' => true,
-                'data' => $data,
+                'offset' => $offset,
+                'limit' => $limit,
+                'total' => Article::count(),
+                'data' => $articles,
             ];
         } catch (\Exception $e) {
             $statusCode = 500;
