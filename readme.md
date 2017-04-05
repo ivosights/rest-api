@@ -47,6 +47,18 @@ list articles
 
 ### GET /articles/:id
 single article
+```json
+{
+    "status": true,
+    "data": {
+        "id": 2,
+        "title": "Sisi Positif di Balik Absennya Messi",
+        "content": "Bintang sepakbola Argentina itu terpaksa hanya menyaksikan rekan-rekannya dari bangku penonton di pertandingan itu. Messi terkena sanksi skorsing otomatis usai menerima kartu kuning kelima di musim ini dalam pertandingan melawan Valencia sebelum jeda internasional",
+        "created_at": "2017-04-05 00:32:29",
+        "updated_at": "2017-04-05 00:32:29"
+    }
+}
+```
 
 ### POST /articles
 create article
