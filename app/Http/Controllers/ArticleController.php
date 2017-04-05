@@ -126,4 +126,31 @@ class ArticleController extends Controller
 
         return response()->json($response, $statusCode);
     }
+
+    public function detail($id = null)
+    {
+        try {
+            $statusCode = 200;
+            $article = Article::find($id);
+
+            if (is_null($article)) {
+                throw new \Exception("artikel tidak ada.", 1);
+            }
+
+            $response = [
+                'status' => true,
+                'data' => $article,
+            ];
+        } catch (\Exception $e) {
+            $statusCode = 500;
+
+            $response = [
+                'status' => false,
+                'message' => $e->getMessage(),
+                'errors' => null,
+            ];
+        }
+
+        return response()->json($response, $statusCode);
+    }
 }

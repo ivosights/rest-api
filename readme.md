@@ -9,8 +9,8 @@ CRUD Articles https://rest-api.r10.co/articles
 * updated_at
 
 ### GET /articles
-list article
-```
+list articles
+```json
 {
     "status": true,
     "offset": 0,
@@ -44,6 +44,9 @@ list article
 }
 ```
 
+
+### GET /articles/:id
+single article
 
 ### POST /articles
 create article

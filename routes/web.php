@@ -17,5 +17,6 @@ $app->get('/', function () use ($app) {
 
 $app->get('articles', 'ArticleController@index');
 $app->post('articles', 'ArticleController@create');
+$app->get('articles/{id}', 'ArticleController@detail');
 $app->put('articles/{id}', 'ArticleController@update');
 $app->delete('articles/{id}', 'ArticleController@delete');
