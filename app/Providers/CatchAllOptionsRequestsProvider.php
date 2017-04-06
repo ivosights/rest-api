@@ -11,7 +11,6 @@ class CatchAllOptionsRequestsProvider extends ServiceProvider
     public function register()
     {
         $request = app('request');
-        dd('pret' . $request->isMethod('OPTIONS'));
         if ($request->isMethod('OPTIONS')) {
             app()->options($request->path(), function () {return response('', 200);});
         }
