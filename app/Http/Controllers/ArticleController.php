@@ -56,7 +56,7 @@ class ArticleController extends Controller
     public function save($id = null)
     {
         try {
-            $statusCode = 500;
+            $statusCode = 200;
 
             $this->validate($this->request, [
                 'title' => 'required',
