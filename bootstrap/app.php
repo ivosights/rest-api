@@ -89,7 +89,8 @@ $app->middleware([
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 //$app->register('App\Providers\CatchAllOptionsRequestsProvider');
-
+$app->configure('cors');
+$app->register(Barryvdh\Cors\ServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
