@@ -73,5 +73,5 @@ delete article by id
 # Install
 * clone
 * composer install
-* import db (api.sql)[https://github.com/ivosights/rest-api/blob/master/api.sql]
-* create env from (.env.example)[https://github.com/ivosights/rest-api/blob/master/.env.example]
+* import db [api.sql](https://github.com/ivosights/rest-api/blob/master/api.sql)
+* create env from [.env.example](https://github.com/ivosights/rest-api/blob/master/.env.example)
