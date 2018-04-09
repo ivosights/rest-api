@@ -5,7 +5,7 @@ CRUD Articles https://rest-api.r10.co/articles
 ## Fields
 * title - required
 * content - required
-* created_at
+* created_at 
 * updated_at
 
 ### GET /articles
